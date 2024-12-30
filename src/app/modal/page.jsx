@@ -2,6 +2,7 @@
 
 import Modal from "@/_components/Modal";
 import { useState } from "react";
+import "./style.scss";
 
 export default function ModalPage() {
 
@@ -15,12 +16,13 @@ export default function ModalPage() {
       <button
         type="button"
         onClick={() => handleOpenModal()}
+        className="open-modal-btn"
       >
         Abir modal
       </button>
-      <Modal 
-        isOpen={showModal} 
-        onClose={() => handleCloseModal()} 
+      <Modal
+        isOpen={showModal}
+        onClose={() => handleCloseModal()}
       />
     </>
   )
