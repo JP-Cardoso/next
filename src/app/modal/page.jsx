@@ -1,6 +1,6 @@
 "use client";
 
-import Modal from "@/_components/Modal";
+import Modal from "@/_components/Modal-Wrong";
 import { useState } from "react";
 import "./style.scss";
 
@@ -23,6 +23,8 @@ export default function ModalPage() {
       <Modal
         isOpen={showModal}
         onClose={() => handleCloseModal()}
+        isActions
+        isHeaderCloseBtn
       />
     </>
   )
