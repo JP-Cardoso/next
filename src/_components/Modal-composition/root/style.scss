@@ -1,0 +1,12 @@
+.dialog-container-composition {
+  width: 60%;
+  border: none;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  &[open] {
+    display: flex;
+    flex-direction: column;
+  }
+
+}

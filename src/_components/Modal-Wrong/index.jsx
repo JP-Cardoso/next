@@ -7,7 +7,8 @@ export default function Modal({
   isOpen,
   onClose,
   isActions,
-  isHeaderCloseBtn
+  isHeaderCloseBtn,
+  isSaveBtn
 }) {
 
   const modalRef = useRef(null);
@@ -52,17 +53,22 @@ export default function Modal({
       </div>
       {
         isActions && (
-          <div className="actions">
+          <div className="actions">    
             <button
               onClick={onClose}
             >
               Cancelar
             </button>
-            <button
-              onClick={onClose}
-            >
-              Salvar
-            </button>
+            {
+              isSaveBtn && (
+                <button
+                  onClick={onClose}
+                >
+                  Salvar
+                </button>
+              )
+            }
+
           </div>
         )
       }
